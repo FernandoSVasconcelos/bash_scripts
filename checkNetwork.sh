@@ -23,7 +23,7 @@ function waitNetwork(){
         echo "...Esperando o encerramento da conexão ..."
 		echo ""
 		sleep 3
-		#clear
+		clear
 		checkNetwork
 	
 	done
