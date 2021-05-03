@@ -80,7 +80,7 @@ function waitNetwork(){
         echo "...Esperando o encerramento da conexão ..."
 		echo ""
 		sleep 3
-		#clear
+		clear
 		checkNetwork
 	
 	done
@@ -92,8 +92,8 @@ sleep $startUp
 echo "Procurando SSD" >> "${logfile}"
 waitMount
 
-#echo "Verificando conexão" >> "${logfile}"
-#waitNetwork
+echo "Verificando conexão" >> "${logfile}"
+waitNetwork
 
 echo "Iniciando os processos" >> "${logfile}"
 startDaemons
@@ -103,11 +103,6 @@ echo "Iniciando as capturas" >> "${logfile}"
 
 while true
 do
-
-	# TO DO
-	#Checar se tem internet. Se tiver, pular o loop e gerar um sleep antes de checar novamente
-	#waitNetwork
-
 	startCaptures
 	sleep 10
 done
